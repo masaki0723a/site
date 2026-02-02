@@ -1,42 +1,41 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <title>Work Status</title>
-  <style>
-    body { font-family: sans-serif; padding: 40px; }
-    .status { font-size: 24px; font-weight: bold; }
-    .open { color: green; }
-    .busy { color: red; }
-    .hidden { display: none; }
-  </style>
-</head>
 <body>
 
-<h1>I build what you ask.</h1>
+<header>
+  <h1>言われた通りに作ります</h1>
+</header>
 
-<div id="status" class="status"></div>
+<div class="layout">
 
-<script>
-  // status = "open" | "busy" | "hidden"
-  const status = "hidden";
+  <nav class="sidebar">
+    <ul>
+      <li><a href="/">トップ</a></li>
+      <li><a href="/log/">開発ログ</a></li>
+    </ul>
+  </nav>
 
-  const el = document.getElementById("status");
+  <main class="content">
+    <section>
+      <h2>概要</h2>
+      <p>
+        Webアプリや小さなツールを、仕様どおり実装します。
+      </p>
+    </section>
 
-  if (status === "open") {
-    el.textContent = "🟢 受付中";
-    el.className = "status open";
-  }
+    <section>
+      <h2>できる仕事</h2>
+      <ul>
+        <li>Webアプリ</li>
+        <li>小規模な自動化</li>
+        <li>既存コード修正</li>
+        <li>静的サイト制作</li>
+      </ul>
+    </section>
+  </main>
 
-  if (status === "busy") {
-    el.textContent = "🔴 稼働中（新規受付停止）";
-    el.className = "status busy";
-  }
+</div>
 
-  if (status === "hidden") {
-    el.className = "status hidden";
-  }
-</script>
+<footer>
+  <p>contact: xxx@example.com</p>
+</footer>
 
 </body>
-</html>
