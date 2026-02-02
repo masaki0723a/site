@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Work Status</title>
+  <style>
+    body { font-family: sans-serif; padding: 40px; }
+    .status { font-size: 24px; font-weight: bold; }
+    .open { color: green; }
+    .busy { color: red; }
+    .hidden { display: none; }
+  </style>
+</head>
+<body>
+
+<h1>I build what you ask.</h1>
+
+<div id="status" class="status"></div>
+
+<script>
+  // status = "open" | "busy" | "hidden"
+  const status = "open";
+
+  const el = document.getElementById("status");
+
+  if (status === "open") {
+    el.textContent = "🟢 受付中";
+    el.className = "status open";
+  }
+
+  if (status === "busy") {
+    el.textContent = "🔴 稼働中（新規受付停止）";
+    el.className = "status busy";
+  }
+
+  if (status === "hidden") {
+    el.className = "status hidden";
+  }
+</script>
+
+</body>
+</html>
