@@ -1,17 +1,3 @@
-<script>
-fetch("./status.json")
-  .then(res => res.json())
-  .then(data => {
-    const el = document.getElementById("workStatus");
-    if (data.status === "open") {
-      el.innerText = "🟢 受付中";
-    } else if (data.status === "busy") {
-      el.innerText = "🟡 多忙";
-    } else {
-      el.innerText = "🔴 受付停止";
-    }
-  });
-</script>
 <body>
 
 <header>
@@ -56,6 +42,21 @@ fetch("./status.json")
 <footer>
   <p>contact: xxx@xample.com</p>
 </footer>
+
+<script>
+fetch("./status.json")
+  .then(res => res.json())
+  .then(data => {
+    const el = document.getElementById("workStatus");
+    if (data.status === "open") {
+      el.innerText = "🟢 受付中";
+    } else if (data.status === "busy") {
+      el.innerText = "🟡 多忙";
+    } else {
+      el.innerText = "🔴 受付停止";
+    }
+  });
+</script>
 
 </body>
 
