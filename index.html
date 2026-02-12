@@ -1,7 +1,22 @@
+<script>
+fetch("./status.json")
+  .then(res => res.json())
+  .then(data => {
+    const el = document.getElementById("workStatus");
+    if (data.status === "open") {
+      el.innerText = "🟢 受付中";
+    } else if (data.status === "busy") {
+      el.innerText = "🟡 多忙";
+    } else {
+      el.innerText = "🔴 受付停止";
+    }
+  });
+</script>
 <body>
 
 <header>
-  <h1>言われた通りに作ります</h1>
+  <h1>デジタルコンテンツ作成依頼募集中！</h1>
+  <p id="workStatus"></p>
 </header>
 
 <div class="layout">
@@ -17,17 +32,17 @@
     <section>
       <h2>概要</h2>
       <p>
-        Webアプリや小さなツールを、仕様どおり実装します。
+        Webアプリや小さなツールを、仕様どおり実装します。<br>
+        AIを使用してプログラムを書いています、練習中なので料金は頂きません。<br>
+        「こういうの、あったらいいな」という思いがありましたら、ご相談だけでもいかがですか？
       </p>
     </section>
 
     <section>
-      <h2>できる仕事</h2>
+      <h2>作ったことのあるもの</h2>
       <ul>
         <li>Webアプリ</li>
-        <li>小規模な自動化</li>
-        <li>既存コード修正</li>
-        <li>静的サイト制作</li>
+        <li>discordのbot</li>
       </ul>
     </section>
   </main>
@@ -37,5 +52,12 @@
 <footer>
   <p>contact: xxx@xample.com</p>
 </footer>
+
+<footer>
+  <p>contact: xxx@xample.com</p>
+</footer>
+
+</body>
+
 
 </body>
