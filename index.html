@@ -1,13 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>デジタルコンテンツ作成依頼募集中</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="class.css">
+</head>
+
 <body>
 
-<header>
-  <h1>デジタルコンテンツ作成依頼募集中！</h1>
-  <p id="workStatus" style="font-weight:bold;"></p>
+<header class="hero">
+  <div class="hero-text">
+    <h1>デジタルコンテンツ作成依頼募集中！</h1>
+    <p id="workStatus" class="status"></p>
+  </div>
 </header>
 
 <div class="layout">
 
   <main class="content">
+
     <section>
       <h2>できること</h2>
       <ul>
@@ -37,14 +49,15 @@
         xxx@xample.com
       </a>
     </section>
+
   </main>
 
   <aside class="sidebar">
-    <img src="icon.jpg" class="icon">
+    <img src="icon.jpg" alt="icon" class="icon">
     <h3>まさき</h3>
     <p>仕様があれば実装します。</p>
 
-    <a href="https://x.com/あなたのID" target="_blank">
+    <a href="https://x.com/あなたのID" target="_blank" class="x-link">
       Xを見る
     </a>
 
@@ -54,17 +67,6 @@
   </aside>
 
 </div>
-
-
-<footer>
-  <p>
-    お問い合わせは
-    <a href="mailto:xxx@xample.com?subject=お問い合わせ">
-      xxx@xample.com
-    </a>
-    まで
-  </p>
-</footer>
 
 <script>
 fetch("./status.json")
@@ -82,3 +84,4 @@ fetch("./status.json")
 </script>
 
 </body>
+</html>
