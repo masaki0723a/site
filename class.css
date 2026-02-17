@@ -117,8 +117,9 @@ body {
     padding: 16px 0;
   }
 
-  .content section {
-    padding: 18px;
-  }
+  .content section:hover {
+  transform: translateY(-3px);
+  transition: 0.2s ease;
+}
 
 }
